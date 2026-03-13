@@ -1,0 +1,44 @@
+{
+  "name": "hex-calc",
+  "displayName": "Hex Calc",
+  "description": "A simple hex calculator in the bottom panel.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "hexCalcPanel",
+          "title": "Hex Calc",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "hexCalcPanel": [
+        {
+          "type": "webview",
+          "id": "hexCalcView",
+          "name": "Hex Calculator"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/node": "20.x",
+    "typescript": "^5.4.0"
+  }
+}
